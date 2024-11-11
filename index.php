@@ -9,9 +9,14 @@ switch($page){
     case "formulaire" : 
         include "formulaire.php";
         break;
+    case "gank" : 
+        include "gank.php";
+        break;
     case "accueil" : 
         include "accueil.php";
         break;
+    case "camembert" :
+        include "traitement/camembert.php";
 }
 ?>
 
