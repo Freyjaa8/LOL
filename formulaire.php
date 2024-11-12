@@ -16,6 +16,19 @@
             <option>Nous :(</option>
             <option>Eux :D</option>
             <option>Les deux</option>
+            <option>Aucun</option>
+        </select>
+        </div>
+        <div class="form-group">
+          <label for="jour">Quel jour de la semaine ?</label>
+          <select class="form-control" name="jour" id="jour">
+            <option>Lundi</option>
+            <option>Mardi</option>
+            <option>Mercredi</option>
+            <option>Jeudi</option>
+            <option>Vendredi</option>
+            <option>Samedi</option>
+            <option>Dimanche</option>
         </select>
         </div>
         <div class="text-center">

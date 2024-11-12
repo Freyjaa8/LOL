@@ -1,9 +1,10 @@
 <?php
 include "connect.php";
-$requetes = $connexion->prepare("INSERT INTO game (result, gank) VALUES (:result, :gank)");
+$requetes = $connexion->prepare("INSERT INTO game (result, gank,jour) VALUES (:result, :gank, :jour)");
 $requetes -> execute(array(
     ':result'=> $_POST['result'],
     ':gank' => $_POST['gank'],
+    ':jour' => $_POST['jour'],
   ));
 
 if($requetes) {

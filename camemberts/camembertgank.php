@@ -1,9 +1,5 @@
-<?php
-include "fonctions.php";
-?>
-
 <div class="container d-flex justify-content-center mt-4">
-        <canvas id="myPieChart" width="300" height="300"></canvas>
+        <canvas id="gank" width="300" height="300"></canvas>
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
@@ -20,17 +16,17 @@ $values = json_encode(array_values($data));
 ?>
 
 <script>
-const labels = <?php echo $labels ?>;
-const data = <?php echo $values ?>;
+const labelsGank = <?php echo $labels ?>;
+const dataGank = <?php echo $values ?>;
 
-const canvas = document.getElementById('myPieChart').getContext('2d');
+const canvas = document.getElementById('gank').getContext('2d');
 
-const myPieChart = new Chart(canvas, {
+const gank = new Chart(canvas, {
             type: 'pie',
             data: {
-                labels: labels,
+                labels: labelsGank,
                 datasets: [{
-                    data: data,
+                    data: dataGank,
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',                       
@@ -72,4 +68,3 @@ const myPieChart = new Chart(canvas, {
             } );
     </script>
 <?php
-echo "<h4 class='text-center mt-5'> Nombre total de parties : ".nbreEntreeTotal()."</h4>";

@@ -16,7 +16,7 @@ switch($page){
         include "accueil.php";
         break;
     case "camembert" :
-        include "traitement/camembert.php";
+        include "camembert/camembert.php";
 }
 ?>
 
