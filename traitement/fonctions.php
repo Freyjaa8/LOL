@@ -52,3 +52,12 @@ function getGanksForToday($jour) {
     $resultat = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $resultat;
 }
+
+function getResultForToday($jour) {
+    include 'connect.php';
+    $requete = "SELECT result, COUNT(*) as total FROM game WHERE jour = :jour GROUP BY result";
+    $stmt = $connexion->prepare($requete);
+    $stmt->execute([':jour' => $jour]);
+    $resultat = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $resultat;
+}

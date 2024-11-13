@@ -1,5 +1,5 @@
 <div class="container d-flex justify-content-center mt-4">
-        <canvas id="gankJour" width="300" height="300"></canvas>
+        <canvas id="resultJour" width="300" height="300"></canvas>
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
@@ -11,35 +11,38 @@ $formatter = new IntlDateFormatter('fr_FR', IntlDateFormatter::FULL, IntlDateFor
 $formatter->setPattern('EEEE'); // pour afficher le jour en toutes lettres
 $jourActuel = ucfirst($formatter->format($date)); // Majuscule initiale
 
-$ganksForToday = getGanksForToday($jourActuel);
-$dataForChart = json_encode($ganksForToday);
+$resultsForToday = getResultForToday($jourActuel);
+$dataForChart = json_encode($resultsForToday);
 ?>
 <script>
 // Récupérer les données PHP
-const dataFromPHP = <?php echo $dataForChart; ?>;
+const dataFromPHPResult = <?php echo $dataForChart; ?>;
 
 // Préparer les labels et les valeurs pour le graphique
-const labelsJour = dataFromPHP.map(entry => entry.gank);
-const dataJour = dataFromPHP.map(entry => entry.total);
+const labelsJourResult = dataFromPHPResult.map(entry => entry.result);
+const dataJourResult = dataFromPHPResult.map(entry => entry.total);
 
 // Créer le graphique avec Chart.js
-const canvasJour = document.getElementById('gankJour').getContext('2d');
-new Chart(canvasJour, {
+const canvasJourResult = document.getElementById('resultJour').getContext('2d');
+new Chart(canvasJourResult, {
     type: 'pie', 
     data: {
-        labels: labelsJour,
+        labels: labelsJourResult,
         datasets: [{
-            label: 'Nombre de ganks pour <?php echo $jourActuel; ?>',
-            data: dataJour,
+            label: 'Nombre de victoires/défaites pour <?php echo $jourActuel; ?>',
+            data: dataJourResult,
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)'
+                '#1A1A40',
+                '#D1A684',
+                '#FF6F61',
+                '#8C7B6B',
+
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)'
+                '#1A1A40',
+                '#D1A684',
+                '#FF6F61',
+                '#8C7B6B',
             ],
             borderWidth: 1
         }]
@@ -52,7 +55,7 @@ new Chart(canvasJour, {
             },
             title: {
                 display: true,
-                text: 'Nombre de ganks pour <?php echo $jourActuel; ?>'
+                text: 'Nombre de Victoire/Défaite pour <?php echo $jourActuel; ?>'
             },
             datalabels: {
                 display: true,
@@ -62,7 +65,7 @@ new Chart(canvasJour, {
                                 const percentage = ( ( value / total ) * 100 ).toFixed( 1 ) + '%';
                                 return percentage;
                             },
-                            color: '#000', // Couleur du texte
+                            color: '#FFFFFF', // Couleur du texte
                             font: {
                                 weight: 'bold',
                                 size: 16

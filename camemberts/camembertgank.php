@@ -28,12 +28,12 @@ const gank = new Chart(canvas, {
                 datasets: [{
                     data: dataGank,
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',                       
+                        '#1A1A40',
+                        '#D1A684',                       
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
+                        '#1A1A40',
+                        '#D1A684',
                     ],
                     borderWidth: 1
                 }]
@@ -52,7 +52,7 @@ const gank = new Chart(canvas, {
                                 const percentage = ( ( value / total ) * 100 ).toFixed( 1 ) + '%';
                                 return percentage;
                             },
-                            color: '#000', // Couleur du texte
+                            color: '#FFFFFF', // Couleur du texte
                             font: {
                                 weight: 'bold',
                                 size: 16

@@ -1,0 +1,10 @@
+.custom-title {
+    font-size: 2rem; /* Taille de la police */
+    font-weight: 600; /* Poids de la police, un peu plus épais */
+    color: #2c3e50; /* Une couleur sombre et élégante */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1), 0 4px 7px rgba(0, 0, 0, 0.2); /* Ombres subtiles pour l'effet de profondeur */
+    letter-spacing: 1px; /* Espacement des lettres pour un effet plus moderne */
+    text-transform: capitalize; /* Mettre la première lettre de chaque mot en majuscule */
+}
+
+style= "max-width:50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); border-radius: 12px; padding: 20px; border: 2px solid #ddd;"

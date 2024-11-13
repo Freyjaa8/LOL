@@ -1,43 +1,72 @@
 <?php
 include "traitement/fonctions.php";
 
-echo "<h4 class='mt-5'> Nombre total de parties : ".nbreEntreeTotal()."</h4>";
+echo "<h4 class='mt-5 mb-5 text-center custom-title'> Nombre total de parties : ".nbreEntreeTotal()."</h4>";
 ?>
 
-<div class="d-flex justify-content-around border mt-2">
-    <div class="d-column">
-    <p class="text-center">Ganks Total : </p>
-<?php
-include "camemberts/camembertgank.php";?>
+<div class="container-fluid mt-5 d-flex justify-content-center col-12 ">
+    <div class = "d-flex flex-column col-6 mr-4">
+
+        <div class="col d-flex justify-content-center ml-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); border-radius: 12px; padding: 20px; border: 2px solid #ddd;">
+            <div class="d-column">
+            <p class="text-center">Ganks Total : </p>
+            <?php include "camemberts/camembertgank.php";?>
+            </div>
+            <div  class="d-column">
+            <p class="text-center">Ratio vicoires / Défaites : </p>
+            <?php include "camemberts/camembertResult.php"; ?>
+            </div>
+        </div>
+
+        <div class="col d-flex justify-content-center mt-2 ml-5" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); border-radius: 12px; padding: 20px; border: 2px solid #ddd;">
+            <div class="d-column">
+            <p class="text-center">Ganks Lors des Victoires : </p>
+            <?php include "camemberts/camembertWingank.php";?>
+            </div>
+            <div  class="d-column">
+            <p class="text-center">Gank Lors des Défaites : </p>
+            <?php include "camemberts/camembertLooseGank.php"; ?>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex flex-column mt-2 row ml-4" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1); border-radius: 12px; padding: 20px; border: 2px solid #ddd;">
+        <div>
+            <?php include "camemberts/camembertJourGank.php"; ?>
+        </div>
+        <div>
+            <div>
+                <?php include "camemberts/camembertJourResult.php"; ?>
+            </div>
+        </div>
+    </div>
 </div>
-<div  class="d-column">
-<p class="text-center">Ratio vicoires / Défaites : </p>
-<?php
-include "camemberts/camembertResult.php";
-?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class= "row justify-content-between">
+    <div class="col-3 border p-3 shadow-sm rounded" >
+    <?php include "camemberts/camembertJourGank.php";
+    ?>
 </div>
-</div>
-<div class="d-flex justify-content-around border mt-2">
-    <div class="d-column">
-    <p class="text-center">Ganks lors des Victoires :</p>
-<?php
-include "camemberts/camembertWinGank.php";?>
-</div>
-<div  class="d-column">
-<p class="text-center">Ganks lors des Défaites :</p>
-<?php
-include "camemberts/camembertLooseGank.php";
-?>
-</div>
-</div>
-<div class="d-flex justify-content-center mt-2">
-    <div class="border">
-    <?php include "camemberts/camembertJour.php";
+<div class="col-3 border p-3 shadow-sm rounded">
+    <div class="border row-5">
+    <?php include "camemberts/camembertJourResult.php";
     ?>
 </div>
 </div>
 
-
+</div>  -->
 
 
 
