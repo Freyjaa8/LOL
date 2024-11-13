@@ -48,7 +48,8 @@ const result = new Chart(canvasResult, {
                             // Format de l'étiquette des données
                             formatter: ( value, context ) =>
                             {
-                                const total = context.dataset.data.reduce( ( acc, val ) => acc + val, 0 );
+                                const dataArray = context.dataset.data.map(Number);
+                                const total = dataArray.reduce( ( acc, val ) => acc + val, 0 );
                                 const percentage = ( ( value / total ) * 100 ).toFixed( 1 ) + '%';
                                 return percentage;
                             },
