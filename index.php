@@ -17,6 +17,13 @@ switch($page){
         break;
     case "camembert" :
         include "camembert/camembert.php";
+        break;
+    case "jours" : 
+        include "joursCamResults.php";
+        break;
+    case "joursGanks" : 
+        include "joursganks.php";
+        break;
 }
 ?>
 

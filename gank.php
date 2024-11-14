@@ -37,7 +37,7 @@ include "traitement/fonctions.php";
             </div>
         </div>
         <div class='text-center mt-5'>
-            <a name="showDays" id="showDays" class="btn btn-dark" href="#" role="button">Voir Stats des jours</a>
+            <a name="showDays" id="showDays" class="btn btn-dark" href="index.php?page=jours" role="button">Voir Stats des jours</a>
         </div>
     </div>
 </div>
