@@ -1,7 +1,5 @@
 <?php
 include "traitement/fonctions.php";
-
-echo "<h4 class='mt-5 mb-5 text-center custom-title'> Nombre total de parties : ".nbreEntreeTotal()."</h4>";
 ?>
 
 <div class="container-fluid mt-5 d-flex justify-content-center col-12 ">
@@ -38,35 +36,14 @@ echo "<h4 class='mt-5 mb-5 text-center custom-title'> Nombre total de parties : 
                 <?php include "camemberts/camembertJourResult.php"; ?>
             </div>
         </div>
+        <div class='text-center mt-5'>
+            <a name="showDays" id="showDays" class="btn btn-dark" href="#" role="button">Voir Stats des jours</a>
+        </div>
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-<div class= "row justify-content-between">
-    <div class="col-3 border p-3 shadow-sm rounded" >
-    <?php include "camemberts/camembertJourGank.php";
-    ?>
-</div>
-<div class="col-3 border p-3 shadow-sm rounded">
-    <div class="border row-5">
-    <?php include "camemberts/camembertJourResult.php";
-    ?>
-</div>
-</div>
-
-</div>  -->
+<?php
+echo "<h4 class='mt-5 mb-5 text-center custom-title'> Nombre total de parties : ".nbreEntreeTotal()."</h4>";
 
 
 

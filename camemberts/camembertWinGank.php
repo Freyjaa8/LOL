@@ -1,5 +1,3 @@
-
-
 <div class="container d-flex justify-content-center mt-4">
         <canvas id="winGank" width="300" height="300"></canvas>
     </div>
